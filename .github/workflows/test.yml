@@ -1,0 +1,23 @@
+name: Test
+on: [pull_request]
+
+jobs:
+  diff-action-test:
+    runs-on: ubuntu-latest
+    name: diff notebooks
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: diff notebooks
+        uses: ./ # Uses an action in the root directory
+        id: diff-notebooks
+        with:
+          remote: "origin/diff-notebooks"
+          export_dir: "./artifacts"
+      - uses: actions/upload-artifact@v2
+        with:
+          name: diff-notebooks
+          path: ${{steps.diff-notebooks.outputs.export_dir}}
+
