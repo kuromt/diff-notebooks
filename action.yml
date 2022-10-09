@@ -1,0 +1,44 @@
+name: 'diff-notebooks'
+author: "kuromt"
+description: 'diff notebooks'
+inputs:
+  base:
+    required: false
+    description: |
+      The base notebook filename OR base git-revision.
+    default: ""
+  remote:
+    required: false
+    description: |
+      The remote modified notebook filename OR remote git-revision.
+    default: HEAD
+  port:
+    required: false
+    description: |
+        specify the port you want the server to run on. Default is 8888.
+    default: 8888
+  export_dir:
+    required: false
+    description: |
+      directory for saving diff file.
+    default: "./atricacts"
+  nbdiff_web_exporter_options:
+    required: false
+    description: | 
+      options of nbdiff-web-exporter. Do not set port and export-dir options.
+    default: ''
+outputs:
+  nbdiff_web_export_dir:
+    description: "directory for saving diff file"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.base }}
+    - ${{ inputs.remote }}
+    - ${{ inputs.port }}
+    - ${{ inputs.export_dir }}
+    - ${{ inputs.nbdiff_web_exporter_options }}
+branding:
+  icon: "git-pull-request"
+  color: "green"
