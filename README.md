@@ -6,7 +6,7 @@ diff-notebooks store html files as artifacts.
 ![](https://raw.githubusercontent.com/kuromt/diff-notebooks/images/artifacts_view.png)
 
 
-You can confirm diff of notebooks in your brouwser. 
+You can confirm diff of notebooks in your browser. 
 
 ![](https://raw.githubusercontent.com/kuromt/diff-notebooks/images/html_view.png)
 
