@@ -1,5 +1,14 @@
-# diff-notebooks
+artifacts_view.png# diff-notebooks
 Github Actions to compare notebook files.
+
+diff-notebooks store html files as artifacts.
+
+![](https://raw.githubusercontent.com/kuromt/diff-notebooks/images/artifacts_view.png)
+
+
+You can confirm diff of notebooks in your brouwser. 
+
+![](https://raw.githubusercontent.com/kuromt/diff-notebooks/images/html_view.png)
 
 # Dependencies
 
