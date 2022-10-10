@@ -1,4 +1,4 @@
-artifacts_view.png# diff-notebooks
+# diff-notebooks
 Github Actions to compare notebook files.
 
 diff-notebooks store html files as artifacts.
